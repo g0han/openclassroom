@@ -1,0 +1,10 @@
+<li [ngClass]="{ 'position-relative': true,
+                  'list-group-item': true,
+                  'list-group-item-success': like > 0,
+                  'list-group-item-danger': like < 0 }">
+  <h4>{{ titlePost }}</h4>
+  <p>{{ descriptionPost }}</p>
+  <button class="btn btn-success mr-2" (click)="onLike()">Love it</button>
+  <button class="btn btn-danger" (click)="onDislike()">Don't love it</button>
+  <div class="position-absolute" style="top:5px;right:5px;"><i>{{ datePost | date: 'dd/MM/y, h:m a' }}</i></div>
+</li>
